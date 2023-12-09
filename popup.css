@@ -33,16 +33,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-form {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-#url-input,
-#url-input1 {
+#url-input {
     margin-top: 25px;
     flex-grow: 1;
     padding: 10px;
@@ -51,19 +42,6 @@ form {
     font-size: 14px;
     line-height: 1.5;
     color: #333;
-}
-
-#check-button {
-    margin-top: 25px;
-    margin-left: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    background-color: #0078d4;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
 }
 
 #result {
