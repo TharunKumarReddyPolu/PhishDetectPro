@@ -9,11 +9,9 @@ app = FastAPI()
 # Create an instance of the ClassifyURL class for URL classification
 classifier = ClassifyURL()
 
-class TextIn(BaseModel):
-    text: str
+class UrlIn(BaseModel):
+    url: str
 
-class PredictionOut(BaseModel):
-    SiteType: str
 
 # Define a FastAPI route at the endpoint "/" which redirects to home
 @app.get("/")
