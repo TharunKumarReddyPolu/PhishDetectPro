@@ -11,7 +11,6 @@ from datetime import date, datetime
 import time
 from dateutil.parser import parse as date_parse
 from urllib.parse import urlparse
-import pickle
 
 class FeatureExtraction:
     # This class contains the methods that extract the required features of the URL
