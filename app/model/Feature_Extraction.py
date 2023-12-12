@@ -1,4 +1,5 @@
 import ipaddress
+import pickle
 import re
 from socket import timeout
 import urllib.request
@@ -16,7 +17,6 @@ class FeatureExtraction:
     # This class contains the methods that extract the required features of the URL
     # Here, -1 indicates legitimate url and 1 indicates phishing url, 0 indicates Exception or errors.
 
-    # features = []
     def __init__(self, url):
         self.features = []
         self.url = url
@@ -25,7 +25,7 @@ class FeatureExtraction:
         self.urlparse = ""
         self.response = ""
         self.soup = ""
-
+    
         try:
             self.response = requests.get(self.url, timeout=1)
             self.soup = BeautifulSoup(self.response.text, 'html.parser')
@@ -42,8 +42,6 @@ class FeatureExtraction:
             self.whois_response = whois.whois(self.domain, timeout=1)
         except:
             pass
-        
-        self.features.append(self.url)
 
         self.features.append(self.UsingIP())
         self.features.append(self.GetLength())
@@ -411,7 +409,4 @@ class FeatureExtraction:
     # getter method to return the features list
     def getFeaturesList(self):
         return self.features
-        
-        
-
     
