@@ -17,7 +17,7 @@ Legitimate URLs Data Collection: We use an another popular site called Kaggle, f
 
 We extracted few of the domain based features, address bar features, HTML & Javascript based features for the URLs in the datasets. This data is further split for training and testing.
 
-Based on the document, 'Phishing Website Features.docx' in this repository, the values of each feature were converted to 0 for legitimate site and 1 for phishing site. The respective feature extraction process are in 'Feature_Extraction.py' file of this repository.
+Based on the document, 'Phishing Website Features.docx' in this repository, the values of each feature were converted to -1 for legitimate site and 1 for phishing site. The respective feature extraction process are in 'Feature_Extraction.py' file of this repository.
 
 This new dataset is available in 'url_features.csv' of this repository
 
